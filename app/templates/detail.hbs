@@ -1,0 +1,13 @@
+<header id="detail-header">
+    <h1>{{model.name}}</h1>
+</header>
+
+<header id="detail-body">
+    <li><b>Address: </b>{{model.location.address1}}, {{model.location.city}}, {{model.location.state}}</li>
+    <li><b>Rating: </b>{{model.rating}}</li>
+    <li><b>Total Reviews: </b>{{model.review_count}}</li>
+    <li>{{model.display_phone}}</li>
+    <li><a target="_blank" href='{{model.url}}'><b>View Yelp Reviews</b></a></li>
+    <img src="{{model.photos}}">
+</header>
+{{outlet}}
