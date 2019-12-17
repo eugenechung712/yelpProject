@@ -1,57 +1,21 @@
-# project511-yelp
+# Yelp Project
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Author: Eugene chung
 
-## Prerequisites
+A simple web application which allows user to search for restaurants and save information about the restaurant into a database using firebase. 
 
-You will need the following things properly installed on your computer.
+## Time spent
+ * Tutorials, research: around 24 hours
+ * Coding required stories: 4 hours
+ * Optional and extras: 0 hours
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://ember-cli.com/)
-* [Google Chrome](https://google.com/chrome/)
+## User stories
 
-## Installation
+### Required
+ * [x] User can search for restaurants. 
+ * [x] User can save desired restaurant information into firebase.
+ * [x] Autocomplete is running at the most basic level
+ 
+![](yelpproject.gif)
+GIF created with [LiceCap](https://www.cockos.com/licecap/).
 
-* `git clone <repository-url>` this repository
-* `cd project511-yelp`
-* `npm install`
-
-## Running / Development
-
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Linting
-
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
