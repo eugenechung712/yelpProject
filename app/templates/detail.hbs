@@ -1,13 +1,21 @@
 <header id="detail-header">
-    <h1>{{model.name}}</h1>
+    <h1>{{model.business.name}}</h1>
 </header>
 
 <header id="detail-body">
-    <li><b>Address: </b>{{model.location.address1}}, {{model.location.city}}, {{model.location.state}}</li>
-    <li><b>Rating: </b>{{model.rating}}</li>
-    <li><b>Total Reviews: </b>{{model.review_count}}</li>
-    <li>{{model.display_phone}}</li>
-    <li><a target="_blank" href='{{model.url}}'><b>View Yelp Reviews</b></a></li>
-    <img src="{{model.photos}}">
+    <ol><b>Address: </b>{{model.business.location.address1}}, {{model.business.location.city}}, {{model.business.location.state}}</ol>
+    <ol><b>Rating: </b>{{model.business.rating}}</ol>
+    <ol><b>Total Reviews: </b>{{model.business.review_count}}</ol>
+    <ol>{{model.business.display_phone}}</ol>
+    <ol><a target="_blank" href='{{model.business.url}}'><b>View Yelp Reviews</b></a></ol>
+    <ol>{{#if model.favorite}}
+        <button class="save" {{action 'unsave'}}> Unsave</button>
+    {{else}}
+    <button class="save" {{action 'save'}}> Save</button>
+    {{/if}}</ol>
+    <img src="{{model.business.photos}}">
 </header>
+
+{{!-- <li>{{model.coordinates.latitude}}, {{model.coordinates.longitude}}</li> --}}
+    
 {{outlet}}

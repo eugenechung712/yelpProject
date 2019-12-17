@@ -1,12 +1,15 @@
-query searchFunction($term: String!, $location: String!){
-    search(term: $term,
-            location: $location,
-            limit: 5){
-               total
-               business{
-                   name
-                   url
-                   id
-               }
+query search($term: String, $location: String, $price: String,) {
+    search(
+        term: $term,
+        location: $location,
+        price: $price,
+        limit: 10
+    ){
+    total
+    business {
+        name
+        url
+        id
+        }
     }
 }

@@ -2,10 +2,10 @@
     <div class="container">
         <div class="topnav">
             <div class="search-container">
-                <Input @type='text' placeholder="Search Place.." @value={{term}}/>
-                <Input @type='text' placeholder="Search Location.." @value={{location}}/>
+                <Input @type='text' @placeholder="Search Place.." @value={{term}}/>
+                <Input @type='text' @placeholder="Search Location.." @value={{location}}/>
                 <div class="tooltip">
-                <Input @type='text' placeholder="Enter Price Point.." @value={{price}}/>
+                <Input @type='text' @placeholder="Enter Price Point.." @value={{price}}/>
                     <span class="tooltiptext">
                     Establish Your Price Point:
                     <br>1 for $<br>2 for $$<br>3 for $$$<br>4 for $$$$
@@ -17,4 +17,6 @@
 </header>
 
 <div class="results-text"> Results: {{model.total}}</div>
-{{outlet}}
+{{#each model.business as |business|}}
+<ol><LinkTo @route='detail' @model={{business.id}}>{{business.name}}</LinkTo></ol>
+{{/each}}

@@ -1,20 +1,9 @@
-query search($id: String!) {
-    business(id: $id) {
-        name
-        rating
-        review_count
-        url
-        photos
-        display_phone
-        review_count
-        location {
-        address1
-        city
-        state
-      }
-      coordinates {
-        latitude
-        longitude
-      }
-    }
- }
+query business($id: String!) {
+  business(id: $id) {
+    name
+    id
+    alias
+    rating
+    url
+  }
+}

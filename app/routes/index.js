@@ -1,10 +1,10 @@
 import Route from '@ember/routing/route';
 import { queryManager } from 'ember-apollo-client';
 import query from 'project511-yelp/gql/queries/search';
+
 export default Route.extend({
-    apollo: queryManager(),
-    queryParams: {
-       term:{
+    queryParams:{
+        term:{
             refreshModel: true
         },
         location:{
@@ -15,12 +15,14 @@ export default Route.extend({
         }
     },
 
+    apollo: queryManager(),
+
     model(params){
-        if (params.term&&params.location) {
-        let variables = { term: params.term,
-          location: params.location
-        };
-        return this.apollo.watchQuery({ query, variables }, 'search');
+            const variables = {
+                term: params.term,
+                location: (params.location || "New York"),
+                price: params.price
+            };
+            return this.apollo.watchQuery({ query, variables }, 'search');
         }
-    }
 });

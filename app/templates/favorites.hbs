@@ -1,0 +1,13 @@
+<ol>
+{{#each model as |favorite| }}
+<ol>
+    <LinkTo @route="detail" @model={{favorite.yelpid}}>
+    {{favorite.name}}
+    </LinkTo>
+</ol>
+{{else}}
+<ol>
+    No favorites, yet!
+</ol>
+{{/each}}
+</ol>
